@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         q7 = new Question("To kill a mocking bird is based on a true story ?",true);
         q8 = new Question(" legend born is a trilogy?",true);
         q9 = new Question(" The great gatsby was published in 2002",false);
-        q9 = new Question(" if beale streets could talk was written by james baldwin",true);
+        q10 = new Question(" if beale streets could talk was written by james baldwin",true);
 
 
 
@@ -81,13 +81,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if(currentQ.getCorrAns()==false){
-                    toastMsg="You got it wrong";
+                    toastMsg="You got it right";
                     score++;
 
                 }
 
                 else{
-                    toastMsg="You got the question right";
+                    toastMsg="You got the question wrong";
                 }
 
                 duration= Toast.LENGTH_SHORT;
