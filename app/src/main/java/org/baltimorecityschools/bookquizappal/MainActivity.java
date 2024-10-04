@@ -2,6 +2,7 @@ package org.baltimorecityschools.bookquizappal;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -109,7 +110,9 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     currentIndex++;
+                    Log.d("AAAA", String.valueOf(currentIndex));
                     currentQ=questions[currentIndex];
+                    Log.d("AAAA", currentQ.toString());
                     questTV.setText(currentQ.getQText());
 
                 }

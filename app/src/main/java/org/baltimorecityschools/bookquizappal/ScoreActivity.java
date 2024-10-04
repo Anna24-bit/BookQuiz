@@ -1,7 +1,10 @@
 package org.baltimorecityschools.bookquizappal;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -14,6 +17,7 @@ public class ScoreActivity extends AppCompatActivity {
     TextView scoreTV;
     int score;
     Intent welcomeToSA;
+    Button sendScoreBTN;
 
 
 
@@ -28,8 +32,27 @@ public class ScoreActivity extends AppCompatActivity {
         welcomeToSA=getIntent();
         score=welcomeToSA.getIntExtra("score",0);
         scoreTV.setText("" +  score);
+        sendScoreBTN=findViewById(R.id.ebtn);
 
-
+        sendScoreBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] addresses = new String[] {"annael.green@gmail.com"};
+                        String subject = "New score on the BookQuiz app";
+                        composeEmail(addresses, subject);
+            }
+        });
 
     }
+
+    private void composeEmail(String[] addresses, String subject) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // Only email apps handle this.
+        intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
+
 }
