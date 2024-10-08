@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">BookQuizAppAL</string>
+    <string name="q1Text">American panda is written by Tracy Deon ?</string>
+    <string name="q2T">the movie speak came out before the book ?</string>
+    <string name="q3T">No longer human is about an individuals alienation from society ?</string>
+    <string name="q4T">No longer human took place in china ?</string>
+    <string name="q5T">grayson Hawthorn is the MC in inheritance game  ?</string>
+    <string name="q6T">The book harry potter  was released before the movie  ?</string>
+    <string name="qT7">To kill a mocking bird is based on a true story ?</string>
+    <string name="qT8">" legend born is a trilogy?"</string>
+    <string name="qT9">" The great gatsby was published in 2002"</string>
+    <string name="qT10">" if beale streets could talk was written by james baldwin"</string>
+
+
+
 </resources>

@@ -39,6 +39,7 @@ public class ScoreActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String[] addresses = new String[] {"annael.green@gmail.com"};
                         String subject = "New score on the BookQuiz app";
+
                         composeEmail(addresses, subject);
             }
         });

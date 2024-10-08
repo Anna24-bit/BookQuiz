@@ -33,16 +33,16 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        q1 = new Question("American panda is written by Tracy Deon ?",false);
-        q2 = new Question("the movie speak came out before the book ?",false);
-        q3 = new Question("No longer human is about an individuals alienation from society  ?",true);
-        q4 = new Question("No longer human took place in china  ?",false);
-        q5 = new Question("grayson Hawthorn is the MC in inheritance game  ?",false);
-        q6 = new Question("The book harry potter  was released before the movie  ?",true);
-        q7 = new Question("To kill a mocking bird is based on a true story ?",true);
-        q8 = new Question(" legend born is a trilogy?",true);
-        q9 = new Question(" The great gatsby was published in 2002",false);
-        q10 = new Question(" if beale streets could talk was written by james baldwin",true);
+        q1 = new Question(getString(R.string.q1Text),false);
+        q2 = new Question(getString(R.string.q2T),false);
+        q3 = new Question(getString(R.string.q3T),true);
+        q4 = new Question(getString(R.string.q4T),false);
+        q5 = new Question(getString(R.string.q5T),false);
+        q6 = new Question(getString(R.string.q6T),true);
+        q7 = new Question(getString(R.string.qT7),true);
+        q8 = new Question(getString(R.string.qT8),true);
+        q9 = new Question(getString(R.string.qT9),false);
+        q10 = new Question(getString(R.string.qT10),true);
 
 
 
