@@ -38,19 +38,20 @@ public class ScoreActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String[] addresses = new String[] {"annael.green@gmail.com"};
-                        String subject = "New score on the BookQuiz app";
-
-                        composeEmail(addresses, subject);
+                String subject = "New score on the BookQuiz app";
+                String body="you got a score of " + score + " on BookQuiz app.";
+                composeEmail(addresses, subject,body);
             }
         });
 
     }
 
-    private void composeEmail(String[] addresses, String subject) {
+    private void composeEmail(String[] addresses, String subject, String body) {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // Only email apps handle this.
         intent.putExtra(Intent.EXTRA_EMAIL, addresses);
         intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT,body);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }

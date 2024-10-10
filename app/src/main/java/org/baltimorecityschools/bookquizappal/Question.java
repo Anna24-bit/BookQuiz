@@ -3,19 +3,34 @@ package org.baltimorecityschools.bookquizappal;
 public class Question {
     String qText;
     boolean correctAns;
+    String hint;
 
 
-    public Question(String qqText,boolean ccorrectAns){
+    public Question(String qqText,boolean ccorrectAns,String hints){
         qText=qqText;
         correctAns=ccorrectAns;
+        hint=hints;
 
     }
 
     public Question(){
         qText="";
         correctAns=false;
+        hint="";
 
     }
+
+
+    public String getHints(){
+
+        return hint;
+
+    }
+
+    public void setHints(String aHints){
+        hint=aHints;
+    }
+
 
     public boolean getCorrAns(){
 
@@ -36,6 +51,8 @@ public class Question {
     }
 
     public String toString(){
-        return "qText" + qText + "/n"+ "correctAns" +correctAns;
+        return "qText" + qText + "/n"+ "correctAns" +correctAns + hint;
     }
+
+
 }
