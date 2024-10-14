@@ -36,16 +36,16 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        q1 = new Question(getString(R.string.q1Text),false,"American panda was written by the same author of our wayward fate");
-        q2 = new Question(getString(R.string.q2T),false," book was published 1999");
-        q3 = new Question(getString(R.string.q3T),true,"The MC finds people strange");
-        q4 = new Question(getString(R.string.q4T),false,"The MC was born in Tokyo");
-        q5 = new Question(getString(R.string.q5T),false,"the MC has a half sister");
-        q6 = new Question(getString(R.string.q6T),true,"harry potter was book was first published in 1997");
-        q7 = new Question(getString(R.string.qT7),true,"two black men were accused of murder in alabama");
-        q8 = new Question(getString(R.string.qT8),true,"The answers to bree's quest in book two will be revealed in a following book");
-        q9 = new Question(getString(R.string.qT9),false,"The author died in 1940");
-        q10 = new Question(getString(R.string.qT10),true,"james baldwin wrote a story about two lovers from NYC who experienced racism in their city");
+        q1 = new Question(getString(R.string.q1Text),false,getString(R.string.hint1));
+        q2 = new Question(getString(R.string.q2T),false,getString(R.string.hint2));
+        q3 = new Question(getString(R.string.q3T),true,getString(R.string.hint3));
+        q4 = new Question(getString(R.string.q4T),false,getString(R.string.hint4));
+        q5 = new Question(getString(R.string.q5T),false,getString(R.string.hint5));
+        q6 = new Question(getString(R.string.q6T),true,getString(R.string.hint6));
+        q7 = new Question(getString(R.string.qT7),true,getString(R.string.hint7));
+        q8 = new Question(getString(R.string.qT8),true,getString(R.string.hint8));
+        q9 = new Question(getString(R.string.qT9),false,getString(R.string.hint9));
+        q10 = new Question(getString(R.string.qT10),true,getString(R.string.hint10));
 
 
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         nextbn=findViewById(R.id.nxtbtn);
         trueBTN=findViewById(R.id.trbtn);
         falsBTN=findViewById(R.id.flbtn);
-        toastMsg="You got the question wrong";
+        toastMsg=getString(R.string.toastrighta);
         hintBTN=findViewById(R.id.Hbtn);
 
         hintBTN.setOnClickListener(new View.OnClickListener() {
@@ -78,13 +78,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(currentQ.getCorrAns()==true){
-                    toastMsg="You got it right";
+                    toastMsg=getString(R.string.toastright1);
                     score+=5;
 
                 }
 
                 else{
-                    toastMsg="You got the question wrong";
+                    toastMsg=getString(R.string.toastwrong1);
                 }
 
                 duration= Toast.LENGTH_SHORT;
@@ -99,13 +99,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if(currentQ.getCorrAns()==false){
-                    toastMsg="You got it right";
+                    toastMsg=getString(R.string.toastright);
                     score+=5;
 
                 }
 
                 else{
-                    toastMsg="You got the question wrong";
+                    toastMsg=getString(R.string.toastwrong);
                 }
 
                 duration= Toast.LENGTH_SHORT;

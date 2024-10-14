@@ -37,9 +37,9 @@ public class ScoreActivity extends AppCompatActivity {
         sendScoreBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String[] addresses = new String[] {"annael.green@gmail.com"};
-                String subject = "New score on the BookQuiz app";
-                String body="you got a score of " + score + " on BookQuiz app.";
+                String[] addresses = new String[] {getString(R.string.stringaddress)};
+                String subject = getString(R.string.nscore);
+                String body=getString(R.string.screof) + score + getString(R.string.onapp);
                 composeEmail(addresses, subject,body);
             }
         });

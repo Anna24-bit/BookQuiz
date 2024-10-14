@@ -4,18 +4,40 @@
 
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="horizontal"
+    android:orientation="vertical"
+    android:background="@color/turk"
     xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Total Score !!"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginBottom="70dp"
+
+
+
+
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
         android:textAlignment="center"
-        android:textSize="40dp"
+        android:textSize="74dp"
         android:id="@+id/txtv"
+        android:textColor="@color/black"
+     
+
 
 />
+
+
 
     <Button
 
@@ -25,6 +47,10 @@
         android:id="@+id/ebtn"
         android:textSize="22sp"
         android:backgroundTint="@color/digo"
+        android:layout_marginTop="50dp"
+
+
+
         />
 
 
