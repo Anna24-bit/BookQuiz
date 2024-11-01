@@ -29,6 +29,10 @@
     <string name="nscore">New score on the BookQuiz app</string>
     <string name="screof">"you got a score of "</string>
     <string name="onapp">" on BookQuiz app."</string>
+    <string name="true_msg">true</string>
+    <string name="false_text">false</string>
+    <string name="next_txt">next</string>
+    <string name="hint_txt">hint</string>
 
 
 </resources>

@@ -31,7 +31,7 @@
         android:textAlignment="center"
         android:textSize="74dp"
         android:id="@+id/txtv"
-        android:textColor="@color/black"
+
      
 
 

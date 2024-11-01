@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">BookQuizAppAL</string>
+    <string name="q1Text">Le panda américain est écrit par Tracy Deon ?</string>
+    <string name="q2T">le film est sorti avant le livre ?</string>
+    <string name="q3T">L\'humain n\'est-il plus une question d\'aliénation d\'un individu par rapport à la société ?</string>
+    <string name="q4T">L\'humain n\'a-t-il plus eu lieu en Chine ?</string>
+    <string name="q5T">Grayson Hawthorn est le MC dans le jeu d\'héritage ?</string>
+    <string name="q6T">Le livre Harry Potter est sorti avant le film ?</string>
+    <string name="qT7">Tuer un oiseau moqueur est basé sur une histoire vraie</string>
+    <string name="qT8">la légende née est une trilogie ?</string>
+    <string name="qT9">Gatsby le magnifique a été publié en 2002</string>
+    <string name="qT10">Si les rues de Beale pouvaient parler a été écrit par James Baldwin"</string>
+    <string name="hint1">Le panda américain a été écrit par le même auteur de notre destin capricieux</string>
+    <string name="hint2"> le livre a été publié en 1999</string>
+    <string name="hint3">le MC trouve les gens étranges</string>
+    <string name="hint4">Le MC est né à Tokyo</string>
+    <string name="hint5"> le MC a une demi-sœur</string>
+    <string name="hint6">Harry Potter était un livre publié pour la première fois en 1997.</string>
+    <string name="hint7">deux hommes noirs accusés de meurtre en alabama</string>
+    <string name="hint8"> Les réponses à la quête de Bre dans le tome deux seront révélées dans un livre suivant.</string>
+    <string name="hint9"> L\'auteur est décédé en 1940</string>
+    <string name="hint10"> James Baldwin a écrit une histoire sur deux amants de New York qui ont été victimes de racisme dans leur ville.</string>
+    <string name="toastrighta">Vous vous êtes trompé de question</string>
+    <string name="toastright1">Tu as bien compris</string>
+    <string name="toastwrong1">Vous vous êtes trompé de question</string>
+    <string name="toastright">Tu as bien compris</string>
+    <string name="toastwrong">YVous vous êtes trompé de question</string>
+    <string name="stringaddress">annael.green@gmail.com</string>
+    <string name="nscore">  Nouveau score sur l\'application BookQuiz</string>
+    <string name="screof">tu as un score de </string>
+    <string name="onapp"> sur BookQuiz app.</string>
+    <string name="true_msg">frer</string>
+    <string name="false_text">faux</string>
+    <string name="next_txt">avance</string>
+    <string name="hint_txt">indice</string>
+
+
+</resources>
