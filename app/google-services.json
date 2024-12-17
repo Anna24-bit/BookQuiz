@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "51595310790",
+    "firebase_url": "https://bookquizappal-default-rtdb.firebaseio.com",
+    "project_id": "bookquizappal",
+    "storage_bucket": "bookquizappal.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51595310790:android:c966fbe42742a64f6b89c7",
+        "android_client_info": {
+          "package_name": "org.baltimorecityschools.bookquizappal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAih06YS3PUYdNlcw5mJDM11b71Dtn9q6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

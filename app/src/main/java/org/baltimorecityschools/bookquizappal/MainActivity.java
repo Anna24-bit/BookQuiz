@@ -1,6 +1,8 @@
 package org.baltimorecityschools.bookquizappal;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,11 +31,17 @@ public class MainActivity extends AppCompatActivity {
     Question[] questions;
     int currentIndex;
     Button hintBTN;
+    Button setButton;
+    Intent goToset;
+    TextView Htv;
+    private SharedPreferences mPreferences;
+    private String sharedPrefFile = "org.baltimorecityschools.bookquizappal";
+    private final String Name_KEY= "Name";
+    private final String COLOR_KEY= "color";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
         q1 = new Question(getString(R.string.q1Text),false,getString(R.string.hint1));
@@ -46,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         q8 = new Question(getString(R.string.qT8),true,getString(R.string.hint8));
         q9 = new Question(getString(R.string.qT9),false,getString(R.string.hint9));
         q10 = new Question(getString(R.string.qT10),true,getString(R.string.hint10));
-
+        mPreferences=getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
 
 
         currentIndex=0;
@@ -61,6 +69,22 @@ public class MainActivity extends AppCompatActivity {
         falsBTN=findViewById(R.id.flbtn);
         toastMsg=getString(R.string.toastrighta);
         hintBTN=findViewById(R.id.Hbtn);
+        setButton=findViewById(R.id.setbtn);
+        Htv=findViewById(R.id.grtnm);
+        Htv.setText("hello " + mPreferences.getString(Name_KEY, "") + "!");
+
+
+
+        setButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToset=new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(goToset);
+            }
+        });
+
+
+
 
         hintBTN.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,5 +162,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+   @Override
+    protected void onResume( ){
+       super.onResume();
+       Htv.setText("hello " + mPreferences.getString(Name_KEY, "") + "!");
     }
 }

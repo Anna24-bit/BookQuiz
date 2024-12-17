@@ -1,6 +1,7 @@
 package org.baltimorecityschools.bookquizappal;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -13,18 +14,35 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class ScoreActivity extends AppCompatActivity {
     TextView scoreTV;
     int score;
     Intent welcomeToSA;
     Button sendScoreBTN;
+    String initName;
+    TextView greettv2;
+    Button sendHighScorebtn;
+    HighScoreEntry jake ;
+    FirebaseDatabase database;
+    DatabaseReference myRef;
+
+
+
+    TextView Htv;
+    private SharedPreferences mPreferences;
+    private String sharedPrefFile = "org.baltimorecityschools.bookquizappal";
+    private final String Name_KEY= "Name";
+    private final String COLOR_KEY= "color";
+
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_score);
 
         scoreTV=findViewById(R.id.txtv);
@@ -33,7 +51,29 @@ public class ScoreActivity extends AppCompatActivity {
         score=welcomeToSA.getIntExtra("score",0);
         scoreTV.setText("" +  score);
         sendScoreBTN=findViewById(R.id.ebtn);
+        greettv2=findViewById(R.id.greet2);
+        sendHighScorebtn=findViewById(R.id.btton1);
 
+
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("message");
+
+
+
+        mPreferences=getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+        initName=mPreferences.getString(Name_KEY, "") ;
+        greettv2.setText("hello " + initName + "!");
+
+        sendHighScorebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                jake=new HighScoreEntry(initName, score);
+
+                // Write a message to the database
+                myRef.setValue(jake);
+            }
+
+        });
         sendScoreBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
