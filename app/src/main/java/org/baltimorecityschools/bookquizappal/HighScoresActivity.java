@@ -85,7 +85,20 @@ public class HighScoresActivity extends AppCompatActivity {
                 scoreEntry= scoreEntries.get(0);
                 user1.setText(scoreEntry.getName());
                 uscore1.setText(scoreEntry.getScore() + " ");
+
+                scoreEntry= scoreEntries.get(1);
+                user2.setText(scoreEntry.getName());
+                uscore2.setText(scoreEntry.getScore() + " ");
+
+                scoreEntry= scoreEntries.get(2);
+                user3.setText(scoreEntry.getName());
+                uscore3.setText(scoreEntry.getScore() + " ");
+
+
+
             }
+
+
 
             @Override
             public void onCancelled(DatabaseError error) {
