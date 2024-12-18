@@ -28,6 +28,7 @@ public class ScoreActivity extends AppCompatActivity {
     HighScoreEntry jake ;
     FirebaseDatabase database;
     DatabaseReference myRef;
+    Intent goToHighsc;
 
 
 
@@ -69,8 +70,16 @@ public class ScoreActivity extends AppCompatActivity {
             public void onClick(View view) {
                 jake=new HighScoreEntry(initName, score);
 
+
                 // Write a message to the database
-                myRef.setValue(jake);
+
+
+                String key= myRef.push().getKey();
+
+                myRef.child(key).setValue(jake);
+
+                goToHighsc=new Intent(ScoreActivity.this, HighScoresActivity.class);
+                startActivity(goToHighsc);
             }
 
         });
