@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -21,9 +22,17 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class HighScoresActivity extends AppCompatActivity {
+
+
+    LinearLayout Bground;
+    private SharedPreferences mPreferences;
+    private String sharedPrefFile = "org.baltimorecityschools.bookquizappal";
+    private final String Name_KEY= "Name";
+    private final String COLOR_KEY= "color";
 
     TextView user1;
     TextView user2;
@@ -67,6 +76,21 @@ public class HighScoresActivity extends AppCompatActivity {
         scoreEntries= new ArrayList<HighScoreEntry>();
 
 
+        Bground = (LinearLayout) findViewById(R.id.bacg);
+        int initialColor= mPreferences.getInt(COLOR_KEY, 0);
+
+
+
+
+        if(initialColor == R.id.y){
+            Bground.setBackgroundColor(getColor(R.color.yel));
+            Log.d(null,"yellow");
+        }else if ( initialColor == R.id.g){
+            Bground.setBackgroundColor((getColor(R.color.green)));
+        }else if ( initialColor == R.id.b){
+            Bground.setBackgroundColor(getColor(R.color.blue));
+        }
+
 
 
         // Read from the database
@@ -82,6 +106,12 @@ public class HighScoresActivity extends AppCompatActivity {
                     scoreEntries.add(value);
 
                 }
+                Collections.sort(scoreEntries);
+
+                for ( HighScoreEntry hse : scoreEntries) {
+                    System.out.println(hse.getName());
+                }
+
                 scoreEntry= scoreEntries.get(0);
                 user1.setText(scoreEntry.getName());
                 uscore1.setText(scoreEntry.getScore() + " ");

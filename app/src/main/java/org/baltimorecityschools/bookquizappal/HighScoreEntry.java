@@ -1,6 +1,6 @@
 package org.baltimorecityschools.bookquizappal;
 
-public class HighScoreEntry {
+public class HighScoreEntry implements Comparable<HighScoreEntry>{
 
     private String name;
     private Integer score;
@@ -29,6 +29,13 @@ public class HighScoreEntry {
 
     public void setScore(Integer score) {
         this.score = score;
+    }
+
+
+    @Override
+    public int compareTo(HighScoreEntry other) {
+        // Compare books based on their publication year
+        return other.score-this.score;
     }
 
     @Override
