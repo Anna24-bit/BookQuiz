@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -29,6 +31,7 @@ public class ScoreActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myRef;
     Intent goToHighsc;
+    LinearLayout Bground3;
 
 
 
@@ -37,6 +40,8 @@ public class ScoreActivity extends AppCompatActivity {
     private String sharedPrefFile = "org.baltimorecityschools.bookquizappal";
     private final String Name_KEY= "Name";
     private final String COLOR_KEY= "color";
+
+
 
 
 
@@ -58,6 +63,22 @@ public class ScoreActivity extends AppCompatActivity {
 
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("message");
+
+        Bground3 = (LinearLayout) findViewById(R.id.bacg3);
+        mPreferences=getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+        int initialColor= mPreferences.getInt(COLOR_KEY, 0);
+
+
+//copied
+
+        if(initialColor == R.id.y){
+            Bground3.setBackgroundColor(getColor(R.color.yel));
+            Log.d(null,"yellow");
+        }else if ( initialColor == R.id.g){
+            Bground3.setBackgroundColor((getColor(R.color.green)));
+        }else if ( initialColor == R.id.b){
+            Bground3.setBackgroundColor(getColor(R.color.blue));
+        }
 
 
 

@@ -5,6 +5,7 @@ package org.baltimorecityschools.bookquizappal;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -28,11 +29,8 @@ import java.util.Collections;
 public class HighScoresActivity extends AppCompatActivity {
 
 
-    LinearLayout Bground;
-    private SharedPreferences mPreferences;
-    private String sharedPrefFile = "org.baltimorecityschools.bookquizappal";
-    private final String Name_KEY= "Name";
-    private final String COLOR_KEY= "color";
+    LinearLayout Bground2;
+
 
     TextView user1;
     TextView user2;
@@ -75,20 +73,22 @@ public class HighScoresActivity extends AppCompatActivity {
         myRef = database.getReference("message");
         scoreEntries= new ArrayList<HighScoreEntry>();
 
-
-        Bground = (LinearLayout) findViewById(R.id.bacg);
+//copied
+        Bground2 = (LinearLayout) findViewById(R.id.bacg2);
+        mPreferences=getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
         int initialColor= mPreferences.getInt(COLOR_KEY, 0);
 
 
 
+//copied
 
         if(initialColor == R.id.y){
-            Bground.setBackgroundColor(getColor(R.color.yel));
+            Bground2.setBackgroundColor(getColor(R.color.yel));
             Log.d(null,"yellow");
         }else if ( initialColor == R.id.g){
-            Bground.setBackgroundColor((getColor(R.color.green)));
+            Bground2.setBackgroundColor((getColor(R.color.green)));
         }else if ( initialColor == R.id.b){
-            Bground.setBackgroundColor(getColor(R.color.blue));
+            Bground2.setBackgroundColor(getColor(R.color.blue));
         }
 
 
@@ -140,4 +140,7 @@ public class HighScoresActivity extends AppCompatActivity {
 
 
     }
+
+
+
 }

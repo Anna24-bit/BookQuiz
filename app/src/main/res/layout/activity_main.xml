@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@color/turk"
+    android:id="@+id/bacg4"
 
 
 

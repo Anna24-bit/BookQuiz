@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     private String sharedPrefFile = "org.baltimorecityschools.bookquizappal";
     private final String Name_KEY= "Name";
     private final String COLOR_KEY= "color";
+    Intent goToHighsc;
+    LinearLayout Bground4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +75,21 @@ public class MainActivity extends AppCompatActivity {
         setButton=findViewById(R.id.setbtn);
         Htv=findViewById(R.id.grtnm);
         Htv.setText("hello " + mPreferences.getString(Name_KEY, "") + "!");
+        Bground4 = (LinearLayout) findViewById(R.id.bacg4);
+        mPreferences=getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+        int initialColor= mPreferences.getInt(COLOR_KEY, 0);
+
+
+//copied
+
+        if(initialColor == R.id.y){
+            Bground4.setBackgroundColor(getColor(R.color.yel));
+            Log.d(null,"yellow");
+        }else if ( initialColor == R.id.g){
+            Bground4.setBackgroundColor((getColor(R.color.green)));
+        }else if ( initialColor == R.id.b){
+            Bground4.setBackgroundColor(getColor(R.color.blue));
+        }
 
 
 
