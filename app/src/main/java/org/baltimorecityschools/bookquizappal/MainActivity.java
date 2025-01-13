@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     Intent goToHighsc;
     LinearLayout Bground4;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

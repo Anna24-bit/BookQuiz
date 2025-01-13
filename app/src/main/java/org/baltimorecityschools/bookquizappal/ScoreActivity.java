@@ -32,6 +32,8 @@ public class ScoreActivity extends AppCompatActivity {
     DatabaseReference myRef;
     Intent goToHighsc;
     LinearLayout Bground3;
+    Intent goToFront;
+    Button Backbtn;
 
 
 
@@ -59,6 +61,8 @@ public class ScoreActivity extends AppCompatActivity {
         sendScoreBTN=findViewById(R.id.ebtn);
         greettv2=findViewById(R.id.greet2);
         sendHighScorebtn=findViewById(R.id.btton1);
+        Backbtn=findViewById(R.id.backbtn);
+
 
 
         database = FirebaseDatabase.getInstance();
@@ -114,6 +118,17 @@ public class ScoreActivity extends AppCompatActivity {
             }
         });
 
+
+
+
+        Backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToFront=new Intent(ScoreActivity.this, MainActivity.class);
+                startActivity(goToFront);
+            }
+        });
+
     }
 
     private void composeEmail(String[] addresses, String subject, String body) {
@@ -126,5 +141,9 @@ public class ScoreActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+
+
+
 
 }

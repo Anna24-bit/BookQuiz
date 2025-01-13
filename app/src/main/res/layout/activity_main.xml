@@ -85,8 +85,8 @@
         android:text="Settings"
         android:id="@+id/setbtn"
         android:textSize="22sp"
-        android:textColor="@color/purple"
-        android:backgroundTint="@color/white"
+        android:textColor="@color/gray"
+        android:backgroundTint="@color/lightgray"
         android:layout_marginTop="50dp"
 
 

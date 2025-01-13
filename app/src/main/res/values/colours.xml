@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="turk">#2d6f79</color>
-    <color name="yel">#ae9f4d</color>
+    <color name="turk">#ffbb99</color>
+    <color name="yel">#806000</color>
     <color name="digo">#431548</color>
     <color name="white">#ffffff</color>
     <color name="red">#ff0000</color>
     <color name="green">#0a8500</color>
     <color name="blue">#3d78d6</color>
-    <color name="purple">#673AB7</color>
+    <color name="purple">#ddccff</color>
+    <color name="gray">#293d3d</color>
+    <color name="lightgray"> #bfbfbf</color>
+    <color name="black">#000000</color>
 
 
 </resources>
