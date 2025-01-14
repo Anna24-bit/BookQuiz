@@ -2,11 +2,11 @@
 <resources>
 
     <color name="turk">#ffbb99</color>
-    <color name="yel">#806000</color>
+    <color name="yel">#ffff66</color>
     <color name="digo">#431548</color>
     <color name="white">#ffffff</color>
     <color name="red">#ff0000</color>
-    <color name="green">#0a8500</color>
+    <color name="green"> #00cc66</color>
     <color name="blue">#3d78d6</color>
     <color name="purple">#ddccff</color>
     <color name="gray">#293d3d</color>

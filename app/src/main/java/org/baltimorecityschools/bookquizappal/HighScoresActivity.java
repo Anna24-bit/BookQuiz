@@ -109,7 +109,9 @@ public class HighScoresActivity extends AppCompatActivity {
                 Collections.sort(scoreEntries);
 
                 for ( HighScoreEntry hse : scoreEntries) {
-                    System.out.println(hse.getName());
+//                    System.out.println(hse.getName());
+
+                    Log.d(TAG,hse.getName());
                 }
 
                 scoreEntry= scoreEntries.get(0);
