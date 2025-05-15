@@ -35,7 +35,6 @@ public class HighScoresActivity extends AppCompatActivity {
     TextView user1;
     TextView user2;
     TextView user3;
-
     TextView uscore1;
     TextView uscore2;
     TextView uscore3;
